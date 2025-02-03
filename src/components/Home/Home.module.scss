@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+.header {
+  margin-left: rem-calc(70);
+  margin-top: rem-calc(100);
+  font-size: rem-calc(72);
+  font-weight: 700;
+  text-align: left;
+  line-height: auto;
+  color: #1f2c4a;
+  gap: rem-calc(20);
+}
+
+span {
+  color: #e88d3e;
+  font-style: italic;
+  justify-content: right;
+}
+
+.box {
+  margin-top: rem-calc(61);
+  margin-left: rem-calc(70);
+  width: rem-calc(800);
+  height: rem-calc(40);
+  background-color: #1f2c4a;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.container {
+  margin-top: rem-calc(70);
+  margin-left: rem-calc(70);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: rem-calc(10);
+  border: none;
+  border-radius: 5px;
+  width: rem-calc(800);
+  height: rem-calc(50);
+  background-color: #1f2c4a;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  // padding: 5px;
+  // padding-left: 15px;
+}
+
+.dialogBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem-calc(600);
+  height: rem-calc(215);
+  align-items: left;
+  gap: 32px;
+  padding-left: rem-calc(26);
+  padding-top: rem-calc(37);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  transform: translate(-50%, -50%);
+  background: $white;
+}
