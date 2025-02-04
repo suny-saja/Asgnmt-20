@@ -25,9 +25,9 @@ const DialogBox: React.FC<DialogProps> = ({
   }[type];
 
   const imgSrc = {
-    info: './../../logo-info.svg',
-    danger: './../../logo-danger.svg',
-    success: './../../logo-success.svg',
+    info: './../../infoLogo.svg',
+    danger: './../../dangerLogo.svg',
+    success: './../../successLogo.svg',
   }[type];
 
   const description = {
