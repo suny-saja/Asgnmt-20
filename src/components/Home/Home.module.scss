@@ -14,12 +14,13 @@
 .section {
   background-color: #1f2c4a;
   padding: 15px;
-  width: rem-calc(300);
+  width: rem-calc(700);
   height: rem-calc(40);
   border-radius: 5px;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 25px;
 }
 

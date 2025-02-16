@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Home.module.scss';
 import Dialog from '../Dialog/Dialog';
-import Button from '../Button/Button';
+import Button from '../Buttons/Button';
 export const Home: React.FC = () => {
   const [dialogType, setDialogType] = useState<
     'success' | 'info' | 'danger' | 'disabledInfo' | 'disabledDanger' | null
@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
             isOpen={!!dialogType}
             onClose={() => setDialogType(null)}
             onConfirm={() => {
-              alert(`$(dialogType.toUpperCase()} Confirmed`);
+              alert(`${dialogType.toUpperCase()} Confirmed`);
               setDialogType(null);
             }}
           />

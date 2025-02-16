@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../Button/Button';
+import Button from '../Buttons/Button';
 import style from './Dialog.module.scss';
 
 type DialogProps = {
@@ -28,11 +28,11 @@ export const Dialog: React.FC<DialogProps> = ({
 
   const imgSrc = variant
     ? {
-        success: './src/assets/logo-success.svg',
-        info: './src/assets/logo-info.svg',
-        danger: './src/assets/logo-danger.svg',
-        disabledInfo: './src/assets/logo-info.svg',
-        disabledDanger: './src/assets/logo-danger.svg',
+        success: './src/assets/successLogo.svg',
+        info: './src/assets/infoLogo.svg',
+        danger: './src/assets/dangerLogo.svg',
+        disabledInfo: './src/assets/infoLogo.svg',
+        disabledDanger: './src/assets/dangerLogo.svg',
       }[variant]
     : '';
 
