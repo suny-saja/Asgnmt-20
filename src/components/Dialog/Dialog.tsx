@@ -83,7 +83,7 @@ export const Dialog: React.FC<DialogProps> = ({
       <div className={style.dialogBox}>
         <div className={style.container}>
           <div className={style.wrapper}>
-            <img className={style.logo} src={imgSrc} alt='logo' />
+            <img className={style.logo} src={'imgSrc'} alt='logo' />
             <div className={style.content}>
               <h2 className={style.title}>{title}</h2>
               <p className={style.description}>{description}</p>
