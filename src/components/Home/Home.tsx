@@ -43,7 +43,7 @@ export const Home: React.FC = () => {
             onClick={() => setDialogType('disabledDanger')}
           />
         </div>
-        {dialogType !== 'disabledInfo' && dialogType !== 'disabledDanger' && (
+        {dialogType !== null && dialogType !== 'disabledInfo' && dialogType !== 'disabledDanger' && (
           <Dialog
             variant={dialogType}
             isOpen={!!dialogType}
