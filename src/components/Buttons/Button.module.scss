@@ -1,17 +1,6 @@
-.wrapper {
-  display: flex;
-  justify-content: right;
-  position: fixed;
-  align-items: center;
-  gap: 10px;
-  width: rem-calc(600);
-  height: rem-calc(80);
-  background-color: #f5f5f5;
-  padding: 18px 29.5px 17px;
-}
-
-.btn {
-  padding: 10px 20px;
+/* components/ui/Button.module.scss */
+.button {
+  padding: 13px 20px;
   font-size: 14px;
   font-weight: bold;
   border-radius: 5px;
@@ -19,68 +8,75 @@
   transition: all 0.3s ease;
   border: none;
   outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   &:focus {
     outline: 3px solid #e88d3e;
   }
 }
 
-.btn-primary {
+.primary {
   background-color: #0093dd;
   color: white;
 
   &:hover {
-    background-color: #0679b2;
+    background-color: #0389cc;
   }
 
   &:active {
-    background-color: #0679b2;
+    background-color: #0373aa;
   }
 
   &:disabled {
-    background-color: #dcdcdc;
+    background-color: #d9dcdd;
+    border: 2px solid #b3b3b3;
     cursor: not-allowed;
   }
 }
 
-.btn-secondary {
+.secondary {
   background-color: #fff;
   color: #000;
   border: 2px solid #ddd;
 
   &:hover {
-    background-color: #f4f4f4;
+    background-color: #fff;
   }
 
   &:active {
-    background-color: #e0e0e0;
+    background-color: #fff;
   }
 
   &:disabled {
-    background-color: #f9f9f9;
+    background-color: #fff;
+    border: 2px solid #b3b3b3;
+    color: #d8d8d8;
     cursor: not-allowed;
   }
 }
 
-.btn-danger {
-  background-color: #ff1f00;
+.danger {
+  background-color: #f44336;
   color: white;
 
   &:hover {
-    background-color: #af1400;
+    background-color: #e53935;
   }
 
   &:active {
-    background-color: #9a1706;
+    background-color: #d32f2f;
   }
 
   &:disabled {
-    background-color: #f8d7da;
+    background-color: #dedad9;
+    border: 2px solid #b3b3b3;
     cursor: not-allowed;
   }
 }
 
-.btn-outlined {
+.outlined {
   background-color: transparent;
   color: #333;
   border: 2px solid #333;
@@ -103,6 +99,8 @@
   }
 }
 
-.btn-disabled {
+.disabled {
+  border: 2px solid #b3b3b3;
   opacity: 0.5;
+  cursor: not-allowed;
 }
