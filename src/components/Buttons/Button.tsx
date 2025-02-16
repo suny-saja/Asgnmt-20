@@ -2,19 +2,24 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type ButtonProps = {
-  label: string;
-  variant?: 'secondary' | 'primary' | 'danger';
-  onClick: () => void;
+  disabled?: boolean;
+  label?: string;
+  type?: 'primary' | 'secondary' | 'danger' | 'outlined';
+  onClick?: () => void;
+  children?: React.ReactNode;
 };
 
 const Button: React.FC<ButtonProps> = ({
+  disabled = false,
   label,
-  variant = 'secondary',
+  type = 'primary',
   onClick,
 }) => {
   return (
     <button
-      className={`${styles.btn} ${styles[`btn-${variant}`]}`}
+      className={`${styles.button} ${styles[type]} ${
+        disabled ? styles.disabled : ''
+      }`}
       onClick={onClick}
     >
       {label}
