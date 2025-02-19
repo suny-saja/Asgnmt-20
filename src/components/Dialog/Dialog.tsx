@@ -28,11 +28,11 @@ export const Dialog: React.FC<DialogProps> = ({
 
   const imgSrc = variant
     ? {
-        success: '.publicstaticimagessuccessLogo.svg',
-        info: '.publicstaticimagesinfoLogo.svg',
-        danger: '.publicstaticimagesdangerLogo.svg',
-        disabledInfo: '.publicstaticimagesinfoLogo.svg',
-        disabledDanger: '.publicstaticimagesdangerLogo.svg',
+        success: '../static/images/successLogo.svg',
+        info: '../static/images/infoLogo.svg',
+        danger: '../static/images/dangerLogo.svg',
+        disabledInfo: '../static/images/infoLogo.svg',
+        disabledDanger: '../static/images/dangerLogo.svg',
       }[variant]
     : '';
 
