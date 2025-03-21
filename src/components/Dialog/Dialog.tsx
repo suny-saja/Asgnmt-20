@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from '../Buttons/Button';
 import style from './Dialog.module.scss';
+import IconSuccess from '../../assets/successLogo.svg';
+import IconInfo from '../../assets/infoLogo.svg';
+import IconDanger from '../../assets/dangerLogo.svg';
 
 type DialogProps = {
   disabled?: boolean;
-  imgSrc?: string;
+  ImgSrc?: string;
   variant?:
     | 'success'
     | 'info'
@@ -28,13 +31,13 @@ export const Dialog: React.FC<DialogProps> = ({
 }) => {
   if (!isOpen) return null;
 
-  const imgSrc = variant
+  const ImgSrc = variant
     ? {
-        success: 'src/assets/successLogo.svg',
-        info: 'src/assets/infoLogo.svg',
-        danger: 'src/assets/dangerLogo.svg',
-        disabledInfo: 'src/assets/infoLogo.svg',
-        disabledDanger: 'src/assets/dangerLogo.svg',
+        success: IconSuccess ,
+        info: IconInfo ,
+        danger: IconDanger ,
+        disabledInfo:  IconInfo ,
+        disabledDanger:  IconDanger ,
       }[variant]
     : '';
 
@@ -86,7 +89,7 @@ export const Dialog: React.FC<DialogProps> = ({
         <div className={style.dialogBox}>
           <div className={style.container}>
             <div className={style.wrapper}>
-              <img className={style.logo} src={imgSrc} alt='logo' />
+              {<ImgSrc className={style.logo} alt='logo' />}
               <div className={style.content}>
                 <h2 className={style.title}>{title}</h2>
                 <p className={style.description}>{description}</p>
