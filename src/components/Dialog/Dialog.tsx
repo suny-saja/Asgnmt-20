@@ -8,7 +8,7 @@ import IconDanger from '../../assets/dangerLogo.svg';
 
 type DialogProps = {
   disabled?: boolean;
-  ImgSrc?: string;
+  ImgSrc: string | React.FC<React.SVGProps<SVGElement>>;
   variant?:
     | 'success'
     | 'info'
@@ -33,13 +33,13 @@ export const Dialog: React.FC<DialogProps> = ({
 
   const ImgSrc = variant
     ? {
-        success: IconSuccess ,
-        info: IconInfo ,
-        danger: IconDanger ,
-        disabledInfo:  IconInfo ,
-        disabledDanger:  IconDanger ,
+        success: IconSuccess,
+        info: IconInfo,
+        danger: IconDanger,
+        disabledInfo: IconInfo,
+        disabledDanger: IconDanger,
       }[variant]
-    : '';
+    : null;
 
   const title = variant
     ? {
@@ -89,7 +89,7 @@ export const Dialog: React.FC<DialogProps> = ({
         <div className={style.dialogBox}>
           <div className={style.container}>
             <div className={style.wrapper}>
-              <ImgSrc className={style.logo} />
+              {ImgSrc && <ImgSrc className={style.logo} />}
               <div className={style.content}>
                 <h2 className={style.title}>{title}</h2>
                 <p className={style.description}>{description}</p>
