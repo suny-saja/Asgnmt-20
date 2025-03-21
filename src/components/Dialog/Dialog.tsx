@@ -8,7 +8,7 @@ import IconDanger from '../../assets/dangerLogo.svg';
 
 type DialogProps = {
   disabled?: boolean;
-  ImgSrc: string | React.FC<React.SVGProps<SVGElement>>;
+  ImgSrc?: string | React.FC<React.SVGProps<SVGElement>>;
   variant?:
     | 'success'
     | 'info'
